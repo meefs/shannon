@@ -1,5 +1,5 @@
 # Node.js
-node_modules/
+**/node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
@@ -45,6 +45,14 @@ temp/
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# CLI package (runs on host, not in container)
+# Keep apps/cli/package.json so pnpm workspaces resolve
+apps/cli/src/
+**/dist/
+apps/cli/infra/
+apps/cli/tsconfig.json
+apps/cli/tsdown.config.ts
 
 # Docker files (avoid recursive copying)
 Dockerfile*
